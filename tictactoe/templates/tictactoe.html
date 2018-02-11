@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="static/style.css">
+    <script src="static/js.js"></script>
+    {% if main %}<script src="static/main.js"></script>{% endif %}
+    {% if detail %}<script src="static/detail.js"></script>{% endif %}
+    
+</head>
+<body>
+    <div>
+        <a href="/">New game</a>
+    </div>
+    <table>
+        <tr>
+            <td valign="top" >
+
+                <h3>Tic-Tac-Toe</h3>
+                <div id="winner">Winner </div>
+                <table id="game"></table>
+                <br>
+
+                <div id="size">
+                    <h3>Change size from 2 to 10</h3>
+                    <input id="numb">
+                    <button type="button" onclick="setSize(this)">Submit</button>
+                    <br>
+                </div>
+            </td>
+            <td valign="top" width="25%">
+                <h3>Steps</h3>
+                <div id="history">
+                </div>
+                <p id="demo"></p>
+            </td>
+            <td id="games_list" valign="top">
+                {% include 'games_list.html' %}
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

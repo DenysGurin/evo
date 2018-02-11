@@ -1,0 +1,4 @@
+<h3>Games list</h3>
+{% for game in games %}
+    <p><a href="{{ url_for('detail', game_id=game.id) }}">{{game}}</a></p>
+{% endfor %}
